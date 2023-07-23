@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+int maximumProfit(vector<int> &prices){
+// phele maximum profit ko zero decide karlo .
+    int maxprofit=0;
+// minimum price phele highest maximum assume karna hai.
+    int minprices = INT_MAX;
+    int n = prices.size();
+// loop traverse karna hai entire array main.
+    for(int i=0;i<n;i++){
+// current stock prices 
+        int cost = prices[i]-minprices;
+        maxprofit= max(maxprofit, cost);
+        minprices= min(minprices,prices[i]);
+    }
+    return maxprofit;
+}
