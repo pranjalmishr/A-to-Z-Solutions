@@ -1,0 +1,19 @@
+class Solution
+{ 
+    public static int findSum(int Array[],int N) 
+    {
+        int min = Array[0];
+        int max = Array[0];
+        int i = 0;
+        for(i=0;i<N;i++) {
+            if (Array[i]<max) {
+                max = Array[i];
+            }
+            if(Array[i]>min){
+                min = Array[i];
+            }
+        } int Sum = max + min;
+        return Sum;
+        
+    }
+}
